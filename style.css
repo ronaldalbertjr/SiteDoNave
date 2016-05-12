@@ -1,0 +1,79 @@
+@font-face
+{
+    font-family: MainWords;
+    src: url(Fontes/MightypeScript.otf);
+}
+@font-face
+{
+    font-family: NaveWords;
+    src: url(Fontes/Quicksand-Regular.otf);
+}
+header
+{
+    position: fixed;
+    width: 100%;
+    height: 20%;
+    background-color: #999999;
+    top: 80%;
+    left: 0;
+}
+p.NAVE
+{
+    position: absolute;
+    top: 1%;
+    left: 45%;
+    color: white;
+    font-family: NaveWords;
+    font-size: 400%;
+    padding: 0;
+    margin:0;
+}
+div.box
+{
+    position: absolute;
+    padding: 0;
+    margin: auto;
+    top: 60%;
+    left: 43.75%;
+}
+div.sel
+{
+    padding: 0;
+    margin: 5px;
+    background-color: white;
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+}
+div.main
+{
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+}
+#op
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0;
+    margin 0;
+    background-color: #ececc6;
+    width: 100%;
+    height: 100%;
+}
+p.centertext
+{
+    position: absolute;
+    font-family: MainWords;
+    top: 40%;
+    left: 32%;
+    font-size: 700%;
+    padding: 0;
+    margin: 0;
+}

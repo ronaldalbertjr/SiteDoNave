@@ -1,0 +1,66 @@
+<html>
+<head>
+    <title>
+        NAVE/CEJLL
+    </title>    
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>    
+<body>
+    <header>
+        <p class="NAVE">
+            NAVE
+        </p>   
+        <div class="box">
+            <div id="c1" class="sel" onmouseover="ChangeColor(this)" onmouseout="UnchangeColor(this)" onclick="alert('Essa pagina ainda nao esta pronta')">
+            </div>
+            <div id="c2" class="sel" onmouseover="ChangeColor(this)" onmouseout="UnchangeColor(this)" onclick="alert('Essa pagina ainda nao esta pronta')">
+            </div>
+            <div id="c3" class="sel" onmouseover="ChangeColor(this)" onmouseout="UnchangeColor(this)" onclick="alert('Essa pagina ainda nao esta pronta')">
+            </div>
+            <div id="c4" class="sel" onmouseover="ChangeColor(this)" onmouseout="UnchangeColor(this)" onclick="alert('Essa pagina ainda nao esta pronta')">
+            </div>
+            <div id="c5" class="sel" onmouseover="ChangeColor(this)" onmouseout="UnchangeColor(this)" onclick="alert('Essa pagina ainda nao esta pronta')">
+            </div>
+            <div id="c6" class="sel" onmouseover="ChangeColor(this)" onmouseout="UnchangeColor(this)" onclick="alert('Essa pagina ainda nao esta pronta')">
+            </div>
+            <div id="c7" class="sel" onmouseover="ChangeColor(this)" onmouseout="UnchangeColor(this)" onclick="alert('Essa pagina ainda nao esta pronta')">
+            </div>
+        </div>    
+    </header>
+    <div class=main>
+        <div id="op">
+        </div>
+        <p id = "words" class="centertext">
+        Criatividade
+        </p>
+    </div>    
+    <script>
+        var time =  new Date().getTime();
+        var current;
+        var delta;
+        function ChangeColor(el)
+        {
+            el.style.backgroundColor="forestgreen";
+        }
+        function UnchangeColor(el)
+        {
+            el.style.backgroundColor="white";
+        }
+        function loop()
+        {
+            current = new Date().getTime();
+            delta = (current - time)/1000;
+            if(delta > 3)
+            {
+                document.getElementById("words").innerHTML = "Inovacao";
+                time = new Date().getTime();
+                console.log("tchau");
+            }
+            console.log("oi");
+            setTimeout(loop, 30);
+        }
+        loop();
+    </script>
+</body>    
+</html>    
