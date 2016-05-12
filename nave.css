@@ -1,0 +1,101 @@
+@font-face
+{
+    font-family: MainWords;
+    src: url(Fontes/MightypeScript.otf);
+}
+@font-face
+{
+    font-family: ProximaNova;
+    src: url(Fontes/Proxima_Nova.otf);
+}
+@font-face
+{
+    font-family: NaveWords;
+    src: url(Fontes/Quicksand-Regular.otf);
+}
+@font-face
+{
+    font-family: ThinProximaNova;
+    src: url(Fontes/Proxima_Nova_Light.otf);
+}
+header
+{
+    position: fixed;
+    width: 101.5%;
+    height: 20%;
+    background-color: #ff3333;
+    top: 0;
+    left: -1.5%;
+    box-shadow: 5px 5px 5px #333333;
+    z-index: 1;
+}
+p.NAVE
+{
+    position: absolute;
+    top: 1%;
+    left: 45%;
+    color: #b30000;
+    font-family: NaveWords;
+    font-size: 400%;
+    padding: 0;
+    margin:0;
+}
+div.box
+{
+    position: absolute;
+    padding: 0;
+    margin: auto;
+    top: 60%;
+    left: 43.75%;
+}
+div.sel
+{
+    padding: 0;
+    margin: 5px;
+    background-color: white;
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+}
+div.textos
+{
+    position: absolute;
+    top: 20%;
+    left: 0;
+    height: 80%;
+    width: 100%;
+    background-color: #ff3333;
+    padding: 0;
+    margin: 0;
+    z-index: -1;
+}
+.nova
+{
+    color: #f2f2f2;
+}
+div.lindos
+{
+    position: absolute;
+    top: 20%;
+}
+h1.nova
+{
+    font-family: ProximaNova;
+    text-align: center;
+    font-size: 300%;
+}
+p.nova
+{
+    font-family: ThinProximaNova;
+    padding-left: 40%;
+    font-size: 200%;
+}
+img.none
+{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    height: 60%;
+    width: 25%;
+}

@@ -1,20 +1,18 @@
 <html>
 <head>
-<head>
     <title>
         NAVE/CEJLL
     </title>    
     <meta charset="UTF-8"/>
-    <link rel="stylesheet" type="text/css" href="nave.css">
-</head>        
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>    
-<body> 
+<body>
     <header>
         <p class="NAVE">
             NAVE
         </p>   
         <div class="box">
-            <div id="c1" class="sel" onmouseover="ChangeColor(this)" onmouseout="UnchangeColor(this)" onclick="window.open('index.html'); window.close('index.html');">
+            <div id="c1" class="sel" onmouseover="ChangeColor(this)" onmouseout="UnchangeColor(this)" onclick="window.open('nave.html'); window.close('index.html');">
             </div>
             <div id="c2" class="sel" onmouseover="ChangeColor(this)" onmouseout="UnchangeColor(this)" onclick="alert('Essa pagina ainda nao esta pronta')">
             </div>
@@ -30,23 +28,17 @@
             </div>
         </div>    
     </header>
-    <div class="shadow">        
-    </div>
-    <div class="textos">
-        <h1 class="nova">
-            Quem Somos
-        </h1>
-        <div class="lindos">
-        <p class="nova">
-            &nbsp;&nbsp;&nbsp;&nbsp;Imagine uma escola onde aprender anda de mãos dadas com inventar coisas novas. Uma escola onde ensinar o conteúdo caminha junto com produzir novos conhecimentos
-        </p>
-        <p class="nova">
-            &nbsp;&nbsp;&nbsp;&nbsp;Um lugar onde professores e estudantes se preparam juntos para um mundo cada vez mais digital e desafiador
-        </p>
+    <div class=main>
+        <div id="op">
         </div>
-        <img class="none" src="Imagens/none.PNG" alt="none"/>
-    </div>
+        <p id = "words" class="centertext">
+        Criatividade
+        </p>
+    </div>    
     <script>
+        var time =  new Date().getTime();
+        var current;
+        var delta;
         function ChangeColor(el)
         {
             el.style.backgroundColor="forestgreen";
@@ -55,6 +47,20 @@
         {
             el.style.backgroundColor="white";
         }
+        function loop()
+        {
+            current = new Date().getTime();
+            delta = (current - time)/1000;
+            if(delta > 3)
+            {
+                document.getElementById("words").innerHTML = "Inovacao";
+                time = new Date().getTime();
+                console.log("tchau");
+            }
+            console.log("oi");
+            setTimeout(loop, 30);
+        }
+        loop();
     </script>
 </body>    
 </html>    
