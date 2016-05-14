@@ -40,13 +40,14 @@ window.close('index.html')">
         var time =  new Date().getTime();
         var current;
         var delta;
+        var word = 0;
         function ChangeColor(el)
         {
-            el.style.backgroundColor="forestgreen";
+            el.style.backgroundColor = "forestgreen";
         }
         function UnchangeColor(el)
         {
-            el.style.backgroundColor="white";
+            el.style.backgroundColor = "white";
         }
         function loop()
         {
@@ -54,9 +55,42 @@ window.close('index.html')">
             delta = (current - time)/1000;
             if(delta > 3)
             {
-                document.getElementById("words").innerHTML = "Inovacao";
-                time = new Date().getTime();
-                console.log("tchau");
+                document.getElementById("words").style.opacity -= (delta - 3);
+                if(delta >= 4)
+                {
+                    time = new Date().getTime();
+                    switch(word)
+                    {
+                        case 0:
+                            document.getElementById("words").innerHTML = "Tecnologia";
+                            document.getElementById("words").style.top = "40%";
+                            document.getElementById("words").style.left = "35%";
+                            word = 1;
+                            break;
+                        case 1:   
+                            document.getElementById("words").innerHTML = "Movimento";
+                            document.getElementById("words").style.top = "40%";
+                            document.getElementById("words").style.left = "36%";
+                            word = 2;
+                            break;
+                        case 2:
+                            document.getElementById("words").innerHTML = "Cultura";
+                            document.getElementById("words").style.top = "40%";
+                            document.getElementById("words").style.left = "37%";
+                            word = 3;
+                            break;
+                        case 3:              
+                            document.getElementById("words").innerHTML = "Criatividade";
+                            document.getElementById("words").style.top = "40%";
+                            document.getElementById("words").style.left = "32%";
+                            word = 0;
+                            break;
+                    }
+                }
+            }
+            else if(delta < 1)
+            {
+                document.getElementById("words").style.opacity = delta;
             }
             console.log("oi");
             setTimeout(loop, 30);
