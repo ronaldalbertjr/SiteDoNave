@@ -4,18 +4,17 @@
         NAVE/CEJLL
     </title>    
     <meta charset="UTF-8"/>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>    
+    <link rel="stylesheet" type="text/css" href="acont.css">
+</head>      
 <body>
     <header>
         <p class="NAVE">
             NAVE
         </p>   
         <div class="box">
-            <div id="c1" class="sel" onmouseover="ChangeColor(this)" onmouseout="UnchangeColor(this)" onclick="window.open('nave.html'); window.close('index.html');">
+            <div id="c1" class="sel" onmouseover="ChangeColor(this)" onmouseout="UnchangeColor(this)" onclick="window.open('nave.html'); window.close('acont.html');">
             </div>
-            <div id="c2" class="sel" onmouseover="ChangeColor(this)" onmouseout="UnchangeColor(this)" onclick="window.open('acont.html');
-window.close('index.html')">
+            <div id="c2" class="sel" onmouseover="ChangeColor(this)" onmouseout="UnchangeColor(this)" onclick="window.open('index.html'); window.close('acont.html');">
             </div>
             <div id="c3" class="sel" onmouseover="ChangeColor(this)" onmouseout="UnchangeColor(this)" onclick="alert('Essa pagina ainda nao esta pronta')">
             </div>
@@ -29,17 +28,18 @@ window.close('index.html')">
             </div>
         </div>    
     </header>
-    <div class=main>
-        <div id="op">
-        </div>
-        <p id = "words" class="centertext">
-        Criatividade
-        </p>
-    </div>    
-    <script>
-        var time =  new Date().getTime();
-        var current;
-        var delta;
+    <div class="textos">
+                <h1 class="nova">
+                Acontecimentos
+                </h1>
+            <img class="none" src="Imagens/none5.PNG" alt="none"> 
+            <div class="inline">
+                <img class="none2" src="Imagens/none2.PNG" alt="none"> 
+                <img class="none2" src="Imagens/none3.PNG" alt="none">    
+                <img class="none2" src="Imagens/none4.PNG" alt="none">    
+            </div>  
+    </div>
+     <script>
         function ChangeColor(el)
         {
             el.style.backgroundColor="forestgreen";
@@ -48,20 +48,6 @@ window.close('index.html')">
         {
             el.style.backgroundColor="white";
         }
-        function loop()
-        {
-            current = new Date().getTime();
-            delta = (current - time)/1000;
-            if(delta > 3)
-            {
-                document.getElementById("words").innerHTML = "Inovacao";
-                time = new Date().getTime();
-                console.log("tchau");
-            }
-            console.log("oi");
-            setTimeout(loop, 30);
-        }
-        loop();
     </script>
 </body>    
-</html>    
+</html>
