@@ -28,7 +28,7 @@
             </div>
         </div>    
     </header>
-    <div class="textos">
+    <div id="text" class="textos">
                 <h1 class="nova">
                 Acontecimentos
                 </h1>
@@ -40,14 +40,25 @@
             </div>  
     </div>
      <script>
+        oi = "1500";
         function ChangeColor(el)
         {
-            el.style.backgroundColor="forestgreen";
+            el.style.backgroundColor="#b30000";
         }
         function UnchangeColor(el)
         {
             el.style.backgroundColor="white";
         }
+        function loop()
+        { 
+            if(parseInt(oi) != 0)
+            {
+                oi = (parseInt(oi) - 30).toString();
+                document.getElementById("text").style.left = oi;
+            } 
+            setTimeout(loop, 30);
+        }
+        loop(); 
     </script>
 </body>    
 </html>

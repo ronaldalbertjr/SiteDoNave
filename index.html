@@ -29,7 +29,7 @@ window.close('index.html')">
             </div>
         </div>    
     </header>
-    <div class=main>
+    <div id="main" class="main">
         <div id="op">
         </div>
         <p id = "words" class="centertext">
@@ -37,13 +37,14 @@ window.close('index.html')">
         </p>
     </div>    
     <script>
+        var oi = "1500";
         var time =  new Date().getTime();
         var current;
         var delta;
         var word = 0;
         function ChangeColor(el)
         {
-            el.style.backgroundColor = "forestgreen";
+            el.style.backgroundColor = "#b30000";
         }
         function UnchangeColor(el)
         {
@@ -92,7 +93,11 @@ window.close('index.html')">
             {
                 document.getElementById("words").style.opacity = delta;
             }
-            console.log("oi");
+            if(oi != "0")
+            {
+                oi = (parseInt(oi) - 30).toString();
+                document.getElementById("main").style.left = oi;
+            }
             setTimeout(loop, 30);
         }
         loop();

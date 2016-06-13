@@ -29,7 +29,7 @@
             </div>
         </div>    
     </header>
-    <div class="textos">
+    <div id="oi" class="textos">
         <h1 class="nova">
             Quem Somos
         </h1>
@@ -44,14 +44,25 @@
         <img class="none" src="Imagens/none.PNG" alt="none"/>
     </div>
     <script>
+        var oi = "1500";
         function ChangeColor(el)
         {
-            el.style.backgroundColor="forestgreen";
+            el.style.backgroundColor="#b30000";
         }
         function UnchangeColor(el)
         {
             el.style.backgroundColor="white";
         }
+        function loop()
+        {
+            if(oi != "0")
+            {
+                oi = (parseInt(oi) - 30).toString();
+                document.getElementById("oi").style.left = oi;
+            }
+            setTimeout(loop, 30);
+        }
+        loop();
     </script>
 </body>    
 </html>    
