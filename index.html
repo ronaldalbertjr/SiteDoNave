@@ -19,7 +19,7 @@ window.close('index.html')">
             </div>
             <div id="c3" class="sel" onmouseover="ChangeColor(this)" onmouseout="UnchangeColor(this)" onclick="alert('Essa pagina ainda nao esta pronta')">
             </div>
-            <div id="c4" class="sel" onmouseover="ChangeColor(this)" onmouseout="UnchangeColor(this)" onclick="alert('Essa pagina ainda nao esta pronta')">
+            <div id="c4" class="sel" onmouseover="ChangeColor(this)" onmouseout="UnchangeColor(this)" onclick="window.open('cursos.html'); window.close('index.html');">
             </div>
             <div id="c5" class="sel" onmouseover="ChangeColor(this)" onmouseout="UnchangeColor(this)" onclick="alert('Essa pagina ainda nao esta pronta')">
             </div>
@@ -37,7 +37,6 @@ window.close('index.html')">
         </p>
     </div>    
     <script>
-        var oi = "1500";
         var time =  new Date().getTime();
         var current;
         var delta;
@@ -92,11 +91,6 @@ window.close('index.html')">
             else if(delta < 1)
             {
                 document.getElementById("words").style.opacity = delta;
-            }
-            if(oi != "0")
-            {
-                oi = (parseInt(oi) - 30).toString();
-                document.getElementById("main").style.left = oi;
             }
             setTimeout(loop, 30);
         }

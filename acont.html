@@ -18,7 +18,7 @@
             </div>
             <div id="c3" class="sel" onmouseover="ChangeColor(this)" onmouseout="UnchangeColor(this)" onclick="alert('Essa pagina ainda nao esta pronta')">
             </div>
-            <div id="c4" class="sel" onmouseover="ChangeColor(this)" onmouseout="UnchangeColor(this)" onclick="alert('Essa pagina ainda nao esta pronta')">
+            <div id="c4" class="sel" onmouseover="ChangeColor(this)" onmouseout="UnchangeColor(this)" onclick="window.open('cursos.html'); window.close('acont.html');">
             </div>
             <div id="c5" class="sel" onmouseover="ChangeColor(this)" onmouseout="UnchangeColor(this)" onclick="alert('Essa pagina ainda nao esta pronta')">
             </div>
@@ -40,7 +40,6 @@
             </div>  
     </div>
      <script>
-        oi = "1500";
         function ChangeColor(el)
         {
             el.style.backgroundColor="#b30000";
@@ -48,17 +47,7 @@
         function UnchangeColor(el)
         {
             el.style.backgroundColor="white";
-        }
-        function loop()
-        { 
-            if(parseInt(oi) != 0)
-            {
-                oi = (parseInt(oi) - 30).toString();
-                document.getElementById("text").style.left = oi;
-            } 
-            setTimeout(loop, 30);
-        }
-        loop(); 
+        } 
     </script>
 </body>    
 </html>
